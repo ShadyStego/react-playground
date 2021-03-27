@@ -8,7 +8,7 @@ class InputWrapper extends React.Component {
     // this prevents any component to render if the value hasn't changed
     // I know per React's official documentation that this is not a guarantee,
     // but in this case I added logs if the render function is triggered and confirmed
-    // it didn't execute in either cases
+    // render didn't execute in either cases
     return np.value !== value;
   }
 

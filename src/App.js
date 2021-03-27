@@ -30,15 +30,12 @@ class App extends React.Component {
     const inputFilters = ['METRIC_A', 'METRIC_B'].map((m) => {
       const mv = metricValues.find((f) => f.metric === m);
 
-      function onChange(value) {
-        console.log('onChange+++');
-        console.log(metricValues);
-
+      const onChange = (value) => {
         const newMetricValueFilters = _.cloneDeep(metricValues);
         const mvCopy = newMetricValueFilters.find((f) => f.metric === m);
         mvCopy.value = value;
         this.setState({ metricValues: newMetricValueFilters });
-      }
+      };
 
       const props = {
         range: this.minMaxRanges[m],
